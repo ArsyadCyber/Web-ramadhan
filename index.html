@@ -1,16 +1,130 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <title>LandingPage Ramadhan | lebaran</title>
+  <link rel="stylesheet" href="css/global.css">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <!-- NAVBAR -->
+ <nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img srclogo.png" alt="Your Logo" width="50" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/logo.png" alt="Your Logo" width="50" height="50"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="jadwal-sholat.html">jadwal Sholat</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              lainnya
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="amalan.html">amalan</a></li>
+              <li><a class="dropdown-item" href="doa.html">doa harian</a></li>
+              <li><a class="dropdown-item" href="tahlil.html">Bacaan Tahlil</a></li>
+              <li><a class="dropdown-item" href="listnabi.html">Kisah Singkat 25 Nabi</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="card.html">About Me</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+  
+  
+  <!-- HERO MAIN  -->
+     <header class="hero-section" id="home">
+        <div class="hero-content">
+           <h1 id="hero-title">Ramadhan Sudah Dekat!</h1>
+            <p id="countdown"></p>
+            <button class="cek-button"><a href="jadwal-sholat.html">CEK SEKARANG</a></button>
+        </div>
+    </header>
 
+<div id="bar-notifikasi">
+  <h3>Disclaimer!!!</h3>
+  <p>TOLONG GUNAKAN WEBSITE INI DI PERANGKAT MOBILE, AGAR PENGALAMAN YANG LEBIH BAIK</p>
+  <button id="close-bar-notifikasi">X</button>
+</div>
+
+
+    <!-- AJAKAN -->
+    
+    <section class="panggilan-tindakan mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <h2>Bergabung dengan Komunitas Ramadhan</h2>
+        <p>Temukan komunitas Ramadhan di sekitar Anda untuk bersama-sama menjalani Ramadhan dan meraih keberkahan.</p>
+        <a href="https://t.me/Darsyisa" class="btn btn-secondary">Cari Komunitas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- AMALAN --> 
+ <section class="call-to-action mt-5">
+  <div class="container">
+    <h2>Mulailah Beramal di Bulan Ramadhan!</h2>
+    <p>Bulan Ramadhan adalah bulan penuh berkah dan ampunan. Mari kita manfaatkan bulan ini untuk memperbanyak amal ibadah dan mendekatkan diri kepada Allah SWT.</p>
+    <a href="amalan.html" class="btn btn-primary">Mulailah Sekarang!</a>
+  </div>
+</section>
+
+ 
+  <!-- MOTIVASI -->
+  <section class="motivational-quotes">
+  <div class="container">
+    <h2>Quotes Motivasi Ramadhan</h2>
+    <div class="quote">
+      <p>"Puasa adalah pelajaran kesabaran dan pengendalian diri."</p>
+      <p>- Ustadz Yusuf Mansur</p>
+    </div>
+    <div class="quote">
+      <p>"Puasa adalah waktu untuk merenung dan memperbaiki diri."</p>
+      <p>- Ustadz Abdul Somad</p>
+    </div>
+    <div class="quote">
+      <p>"Puasa adalah waktu untuk memperkuat iman dan meningkatkan ketaqwaan."</p>
+      <p>- Ustadz Hanan Attaki</p>
+    </div>
+  </div>
+</section>
+
+<script src="js/countdown.js"></script>  
+<script>
+ const barNotifikasi = document.getElementById("bar-notifikasi");
+const closeBarNotifikasi = document.getElementById("close-bar-notifikasi");
+
+closeBarNotifikasi.addEventListener("click", () => {
+  barNotifikasi.classList.remove("show");
+});
+
+// Tampilkan bar notifikasi dengan animasi setelah 5 detik
+setTimeout(() => {
+  barNotifikasi.classList.add("show");
+}, 1000);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

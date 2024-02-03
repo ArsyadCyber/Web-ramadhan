@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <title>Jadwal Imsakiyah</title>
+</head>
+<style>
+*, html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  background-color: transparent !important;
+}
+.hero-section {
+  background-image: url('../hero3.jpg');
+  height: 100vh;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.hero-section h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+  /* CSS untuk table */
+.container {
+  overflow-x: auto;
+}
+
+.jadwal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.jadwal-table th,
+.jadwal-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.jadwal-table th {
+  background-color: #f2f2f2;
+}
+
+.jadwal-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+</style>
+<body>
+  
+ <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a href="index.html" class="btn btn-light back-bt" tabindex="-1" role="button" aria-disabled="true">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+</svg>
+        Back
+        </a>
+    </div>
+  </nav>
+  
+<div class="hero-section">
+  <h1 class="display-4">JADWAL SHOLAT</h1>
+</div>
+   
+   
+    <div class="container mt-3 ">
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control cari-kota" placeholder="Cari Kota...">
+    </div>
+
+    <ul class="list-group mt-3 mb-3 hidden-list nama-list-kota">
+    </ul>
+    
+    
+   <div class="text-center"><h2>Harian</h2></div>
+
+    <div class="card mt-3" id="jadwal">
+      <div class="card-header">
+    <p class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+          </svg> <span id="judul-kota">Kota Bandung</span> </p>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Imsak
+            <span class="badge bg-dark rounded-pill imsak">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Subuh
+            <span class="badge bg-dark rounded-pill subuh">2</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Terbit
+            <span class="badge bg-dark rounded-pill terbit">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Dzuhur
+            <span class="badge bg-dark rounded-pill dzuhur">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Ashar
+            <span class="badge bg-dark rounded-pill ashar">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Maghrib
+            <span class="badge bg-dark rounded-pill maghrib">1</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Isya
+            <span class="badge bg-dark rounded-pill isya">1</span>
+          </li>
+        </ul>
+      </div>
+      <div class="card-footer text-muted tanggal">
+        12 April 2022
+      </div>
+    </div>
+  </div>
+   <div class="mt-3 text-center"><h2>Bulanan</h2></div>
+  <div class="container mt-5">   
+  <table class="jadwal-table"></table>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/imsak.js"></script>  
+</body>
+</html>

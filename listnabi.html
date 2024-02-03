@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daftar Nabi</title>
+  <style>
+  *, html, body {
+     text-decoration: none;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+    .nabi-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer; /* Menampilkan kursor ketika diarahkan ke kartu */
+    }
+    .nabi-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #252525;
+    }
+    .nabi-birth-year, .nabi-age {
+      font-size: 16px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daftar kisah 25 Nabi</h1>
+  <div id="nabi-list"></div>
+
+  <script>
+    fetch('https://raw.githubusercontent.com/AzharRivaldi/Kisah-25-Nabi/master/Kisah25Nabi/app/src/main/assets/kisahnabi.json')
+      .then(response => response.json())
+      .then(data => {
+        const nabiList = document.getElementById('nabi-list');
+
+        data.forEach(nabi => {
+          const nabiCard = document.createElement('div');
+          nabiCard.classList.add('nabi-card');
+
+          const nabiLink = document.createElement('a');
+          nabiLink.href = 'kisahnabi.html?namenabi=' + encodeURIComponent(nabi.name); // Contoh URL dengan parameter query
+          nabiCard.appendChild(nabiLink);
+
+          const nabiName = document.createElement('h3');
+          nabiName.classList.add('nabi-name');
+          nabiName.textContent = nabi.name;
+          nabiLink.appendChild(nabiName);
+
+          const nabiBirthYear = document.createElement('p');
+          nabiBirthYear.classList.add('nabi-birth-year');
+          nabiBirthYear.textContent = 'Tahun Kelahiran: ' + nabi.thn_kelahiran;
+          nabiLink.appendChild(nabiBirthYear);
+
+          const nabiAge = document.createElement('p');
+          nabiAge.classList.add('nabi-age');
+          nabiAge.textContent = 'Usia: ' + nabi.usia + ' tahun';
+          nabiLink.appendChild(nabiAge);
+
+          nabiList.appendChild(nabiCard);
+        });
+      })
+      .catch(error => {
+        console.error('Terjadi kesalahan:', error);
+      });
+  </script>
+</body>
+</html>

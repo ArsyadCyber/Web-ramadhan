@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitur Doa dan Dzikir Ramadhan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+      .navbar {
+      position: fixed;
+      top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(5px); 
+  background-color: rgba(51, 51, 51, 0.5); 
+  padding: 10px;
+  color: white;
+  z-index: 1000;
+  
+    }
+
+    /* Style for the heading text on the left */
+    .heading-text {
+      margin: 0;
+    }
+
+    /* Style for the links on the right */
+    .nav-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-right: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 5px 10px;
+      display: block;
+    }
+    
+    h1 {
+      text-align: center;
+      margin: 20px;
+      margin-top: 100px
+    }
+    
+    h2 {
+      text-align: center;
+      margin: 20px;
+    }
+    
+  .doa, .dzikir {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  margin: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.doa-title, .dzikir-title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.doa-text, .dzikir-text {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.arabic-text, .dzikir-arabic {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.filter-button {
+  border: 1px solid white;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* .filter-button:hover {
+  background-color: #45a049;
+} */
+
+.filter-button.active {
+  background-color: #5edeef;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+    <img src="logo.png" alt="" width="50" height="50">
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="#jadwal">jadwal</a></li>
+      <li><a href="#">Info</a></li>
+    </ul>
+  </div>
+  </nav>
+  <h1>Doa dan Dzikir Ramadhan</h1>
+<button class="filter-button" onclick="showAll()" id="filter-all">Tampilkan Semua</button>
+ <button class="filter-button" onclick="filterDoa()" id="filter-doa">Filter Doa</button>
+<button class="filter-button" onclick="filterDzikir()" id="filter-dzikir">Filter Dzikir</button>
+  <h2>LIST DOA</h2>
+  <div id="doa-container"></div>
+  <h2>LIST DZIKIR SIANG DAN SORE</h2>
+  <div id="dzikir-container"></div>
+
+  
+  <script src="js/doa_dzikir.js"></script>
+</body>
+</html>

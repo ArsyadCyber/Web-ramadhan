@@ -1,0 +1,260 @@
+* {
+ overflow-x: hidden;
+ margin: 0;
+ padding: 0;
+
+}
+
+
+.navbar {
+ background-color: transparent !important;
+}
+
+.offcanvas {
+ width: 60% !important;
+ max-width: 60% !important;
+}
+
+.offcanvas-body {
+ background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* HERO SECTION MAIN*/
+.hero-section {
+ background-image: url('../hero.jpg');
+ background-size: cover;
+ background-position: center;
+ object-fit: cover;
+ color: #fff;
+ text-align: center;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.hero-content {
+ max-width: 600px;
+ margin: 0 auto;
+}
+
+.hero-content h1 {
+ font-size: 2.5em;
+ white-space: nowrap;
+ /* Agar teks tidak mematahkan baris */
+ overflow: hidden;
+ /* Agar teks yang melebihi lebar tidak terlihat */
+ animation: runningText 8s linear infinite;
+ /* Sesuaikan durasi animasi yang diinginkan */
+}
+
+.hero-content p {
+ font-size: 1.2em;
+}
+
+.cek-button {
+ padding: 10px 20px;
+ margin-top: 1rem;
+ border: none;
+ border-radius: 7px;
+ background-color: #56bcda;
+}
+
+.cek-button a {
+ text-decoration: none;
+ color: white;
+}
+
+/* COUNTDOWN STYLE */
+#countdown {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 1em;
+ color: black;
+}
+
+.countdown-box {
+ border: 1px solid black;
+ border-radius: 7px;
+ margin: 0 5px;
+ padding: 10px;
+ width: 60px;
+ text-align: center;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ background-color: white;
+}
+
+.hidden-list {
+ display: none;
+}
+
+.panggilan-tindakan {
+ background-image: url('../bg2.jpg');
+ color: #fff;
+ text-align: center;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.motivational-quotes {
+ background-color: #f8f9fa;
+ padding: 50px 0;
+}
+
+.motivational-quotes h2 {
+ text-align: center;
+ font-size: 36px;
+ margin-bottom: 30px;
+}
+
+.quote {
+ margin-bottom: 20px;
+ padding: 20px;
+ border: 1px solid #ced4da;
+ border-radius: 5px;
+ background-color: #fff;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quote p:first-child {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+.quote p:last-child {
+ font-size: 18px;
+ font-style: italic;
+ text-align: right;
+}
+
+
+.call-to-action {
+ background-image: url('../bg.jpg');
+ padding: 20px;
+ background-size: cover;
+ background-position: center;
+ color: #ffffff;
+ text-align: center;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.call-to-action h2 {
+ font-size: 20px;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+.call-to-action p {
+ font-size: 16px;
+ margin-bottom: 20px;
+}
+
+.call-to-action a {
+ background-color: #000000;
+ color: #ffffff;
+ font-size: 16px;
+ font-weight: bold;
+ padding: 10px 20px;
+ border-radius: 5px;
+ text-decoration: none;
+}
+
+#bar-notifikasi {
+ position: fixed;
+ top: 0;
+ right: 0;
+ /* Ubah posisi awal ke kanan */
+ width: 100%;
+ height: 50px;
+ background-color: #ffffff;
+ /* Sesuaikan warna background */
+ color: #000000;
+ text-align: center;
+ z-index: 9999;
+ /* Animasi masuk dari kanan */
+ opacity: 0;
+ transform: translateX(100%);
+ transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#bar-notifikasi.show {
+ opacity: 1;
+ transform: translateX(0);
+}
+
+#bar-notifikasi p {
+ margin: 0;
+ padding: 10px;
+ font-size: 16px;
+}
+
+#bar-notifikasi a {
+ margin-right: 10px;
+ text-decoration: none;
+ color: #ffffff;
+}
+
+#bar-notifikasi button {
+ border: none;
+ background-color: transparent;
+ /* Button transparan */
+ color: #000000;
+ font-size: 20px;
+ /* Perbesar ukuran ikon "X" */
+ cursor: pointer;
+ /* Efek hover */
+ transition: color 0.2s ease-in-out;
+}
+
+#bar-notifikasi button:hover {
+ color: #ff8000;
+ /* Ubah warna saat hover */
+}
+
+#close-bar-notifikasi {
+ display: inline-block;
+ /* Posisikan button di kanan */
+ position: absolute;
+ top: 15%;
+ right: 10px;
+ transform: translateY(-50%);
+ /* Animasi fade out saat diklik */
+ transition: opacity 0.2s ease-in-out;
+}
+
+#close-bar-notifikasi:hover {
+ opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+ #bar-notifikasi {
+  height: 100px;
+ }
+
+ #bar-notifikasi p {
+  font-size: 14px;
+ }
+
+ #bar-notifikasi button {
+  font-size: 16px;
+ }
+}
+
+
+/* ANIMASI */
+@keyframes runningText {
+ from {
+  transform: translateX(100%);
+ }
+
+ to {
+  transform: translateX(-100%);
+ }
+}
