@@ -52,7 +52,7 @@
 
  /* HERO STYLE */
        .hero-section {
-    background-image: url('../images/hero2.jpg');
+    background-image: url('../hero2.jpg');
     background-size: cover;
     background-position: center;
     object-fit: cover;
